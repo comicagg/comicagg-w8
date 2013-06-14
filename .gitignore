@@ -1,0 +1,4 @@
+*.suo
+*.user
+ComicaggApp/bin/*
+ComicaggApp/obj/*
