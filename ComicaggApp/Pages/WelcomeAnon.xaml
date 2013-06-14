@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ComicaggApp.Pages.WelcomeAnon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ComicaggApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" Height="192" Margin="399,334,399,242" VerticalAlignment="Center" Width="568">
+
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{StaticResource TextWelcomeAnonTitle}" VerticalAlignment="Center" Style="{StaticResource StyleWelcomeTitle}" Height="78" Margin="0"/>
+            <Button x:Name="ButtonStartLogin" Content="{StaticResource TextStartLogin}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Click="ButtonStartLogin_Click" Style="{StaticResource ButtonCentered}"/>
+            <ProgressRing x:Name="loginProgress" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="LoginResult" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="#FFBD0606" Text="{StaticResource TextLoginUnsuccessful}" Visibility="Collapsed"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,16 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <x:String x:Key="TextWelcomeAnonTitle">Welcome new user!</x:String>
+    <x:String x:Key="TextWelcomeUserTitle">Hey {0}!</x:String>
+    <x:String x:Key="TextStartLogin">Login to start</x:String>
+    <x:String x:Key="TextReadComics">Read new comics</x:String>
+    <x:String x:Key="TextChoosecomics">Choose comics</x:String>
+    <x:String x:Key="TextLoginUnsuccessful">Login unsuccessful. Try again?</x:String>
+    <x:String x:Key="ButtonMarkAsRead">Mark as read and go to next comic</x:String>
+    <x:String x:Key="LoadingText">Please, wait while the content loads...</x:String>
+    <x:String x:Key="NoUnreadComicsText">There are no new comics</x:String>
+    <x:String x:Key="TotalUnreadsText">You have {0} unread comics</x:String>
+    <x:String x:Key="ComicsHowToText">Click on a name on the left to show the strips</x:String>
+</ResourceDictionary>

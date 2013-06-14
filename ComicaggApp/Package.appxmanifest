@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="246b113f-3022-47e3-a2ed-ed8f6ff5465f" Publisher="CN=jesusfer" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>ComicaggApp</DisplayName>
+    <PublisherDisplayName>jesusfer</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ComicaggApp.App">
+      <VisualElements DisplayName="Comicagg Reader" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Comicagg Reader allows you to read the webcomics you follow in www.comicagg.com in a native Windows 8 application." ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="Comicagg" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#ffffff" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

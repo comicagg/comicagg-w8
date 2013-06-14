@@ -1,0 +1,50 @@
+﻿<common:LayoutAwarePage
+    x:Name="ReadPage"
+    x:Class="ComicaggApp.Pages.ReadComics"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ComicaggApp.Pages"
+    xmlns:common="using:ComicaggApp.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White" d:DesignWidth="1366" d:DesignHeight="768">
+
+    <Page.Resources>
+    </Page.Resources>
+    <common:LayoutAwarePage.TopAppBar>
+        <AppBar Background="{StaticResource AppBarBG}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="ButtonHome" Style="{StaticResource HomeAppBarButtonStyle}" Click="ButtonHome_Click"/>
+                <Button x:Name="ButtonRefresh" Style="{StaticResource RefreshAppBarButtonStyle}" Click="ButtonRefresh_Click"/>
+            </StackPanel>
+        </AppBar>
+    </common:LayoutAwarePage.TopAppBar>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Overlay" Grid.ColumnSpan="2" Opacity="0.3" Background="#FFB4D6FF" Canvas.ZIndex="1" d:IsHidden="True">
+            <TextBlock x:Name="OverlayText" Text="{StaticResource LoadingText}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" TextAlignment="Center"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid>
+                <StackPanel x:Name="StackComics" Margin="0,0,20,0"/>
+                <TextBlock x:Name="TotalUnreads" VerticalAlignment="Bottom" Text="{StaticResource TotalUnreadsText}" Margin="10,10,0,10"/>
+            </Grid>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="1" Margin="0">
+            <StackPanel>
+                <StackPanel x:Name="HowToPanel" Height="40" Orientation="Horizontal" Margin="0,10,0,0" Visibility="Collapsed">
+                    <Image Source="ms-appx:///Assets/arrow2.png" Width="52" Height="21" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Text="{StaticResource ComicsHowToText}" VerticalAlignment="Bottom" Margin="0,0,0,13" Style="{StaticResource HowToText}"/>
+                </StackPanel>
+                <StackPanel x:Name="StackStrips" Margin="0"/>
+                <Button x:Name="ButtonMarkRead" VerticalAlignment="Bottom" Margin="0,40,0,0" Height="50" Content="{StaticResource ButtonMarkAsRead}" Click="MarkReadAndMoveNext" Opacity="1" Background="{StaticResource AppBarBG}" Style="{StaticResource ButtonCentered}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</common:LayoutAwarePage>
