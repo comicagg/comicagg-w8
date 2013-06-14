@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<unreadcomics>
+    <comic id="532" name="NASA&#39;s Astronomy Picture of the Day" website="http://apod.nasa.gov/apod/">
+        <unreads>
+            <strip id="214308" imageurl="http://apod.nasa.gov/apod/image/1305/M16_17-DW.jpg" imagetext=""  date="vie, 31 May 2013 10:00:02 +0200" timestamp="1369987202"/>
+            <strip id="214394" imageurl="http://apod.nasa.gov/apod/image/1306/BC-QueenTrail-Tree-950wp.jpg" imagetext=""  date="sáb, 1 Jun 2013 10:00:10 +0200" timestamp="1370073610"/>
+            <strip id="214442" imageurl="http://apod.nasa.gov/apod/image/1306/rollcloud_eberl_2572.jpg" imagetext=""  date="dom, 2 Jun 2013 10:00:02 +0200" timestamp="1370160002"/>
+            <strip id="214518" imageurl="http://apod.nasa.gov/apod/image/1306/roverwheels_curiosity_2949.jpg" imagetext=""  date="lun, 3 Jun 2013 10:00:02 +0200" timestamp="1370246402"/>
+            <strip id="214627" imageurl="http://apod.nasa.gov/apod/image/1306/m42HSO_gonzalez_2000.jpg" imagetext=""  date="mar, 4 Jun 2013 10:00:02 +0200" timestamp="1370332802"/>
+            <strip id="214714" imageurl="http://apod.nasa.gov/apod/image/1306/m57_hst1280.jpg" imagetext=""  date="mié, 5 Jun 2013 10:00:01 +0200" timestamp="1370419201"/>
+            <strip id="214892" imageurl="http://apod.nasa.gov/apod/image/1306/butterfly_hst_big.jpg" imagetext=""  date="vie, 7 Jun 2013 10:00:02 +0200" timestamp="1370592002"/>
+            <strip id="214969" imageurl="http://apod.nasa.gov/apod/image/1306/MessierCrater3d_vantuyne.jpg" imagetext=""  date="sáb, 8 Jun 2013 10:00:03 +0200" timestamp="1370678403"/>
+            <strip id="215087" imageurl="http://apod.nasa.gov/apod/image/1306/lmc_swift_2119.jpg" imagetext=""  date="lun, 10 Jun 2013 10:00:02 +0200" timestamp="1370851202"/>
+        </unreads>
+    </comic>
+    <comic id="325" name="Nedroid" website="http://nedroid.com/">
+        <unreads>
+            <strip id="214679" imageurl="http://nedroid.com/comics/2013-06-04-beartatothemesong-Copy.png" imagetext="One is short and the other&#39;s tall/ But they like each other best of all/ Though diametrically opposite in many ways/ They&#39;ll stay friends for days and days "  date="mié, 5 Jun 2013 06:00:01 +0200" timestamp="1370404801"/>
+        </unreads>
+    </comic>
+    <comic id="8" name="XKCD" website="http://xkcd.com/">
+        <unreads>
+            <strip id="214323" imageurl="http://imgs.xkcd.com/comics/reports.png" imagetext="If that fails, just multiply every number by a thousand. &amp;#39;The 2nd St speed limit should be set at 2,500 mph, which would likely have prevented 1,000 of the intersection&amp;#39;s 3,000 serious accidents last month.&amp;#39;"  date="vie, 31 May 2013 10:00:02 +0200" timestamp="1369987202"/>
+            <strip id="214486" imageurl="http://imgs.xkcd.com/comics/hipsters.png" imagetext="You may point out that this very retreat into ironic detachment while still clearly participating in the thing in question is the very definition of contemporary hipsterdom. But on the other hand, wait, you&amp;#39;re in an empty room. Who are you talking to?"  date="lun, 3 Jun 2013 06:00:02 +0200" timestamp="1370232002"/>
+            <strip id="214690" imageurl="http://imgs.xkcd.com/comics/nomenclature.png" imagetext="[shouted, from the field] &amp;#39;Aunt Beast hit a pop fly to second! Dive for it, Mrs Whatsit!&amp;#39;"  date="mié, 5 Jun 2013 06:00:01 +0200" timestamp="1370404801"/>
+            <strip id="214867" imageurl="http://imgs.xkcd.com/comics/pastime.png" imagetext="Good thing we&amp;#39;re too smart to spend all day being uselessly frustrated with ourselves. I mean, that&amp;#39;d be a hell of a waste, right?"  date="vie, 7 Jun 2013 06:00:01 +0200" timestamp="1370577601"/>
+            <strip id="215059" imageurl="http://imgs.xkcd.com/comics/dwarf_fortress.png" imagetext="I may be the kind of person who wastes a year implementing a Turing-complete computer in Dwarf Fortress, but that makes you the kind of person who wastes ten more getting that computer to run Minecraft."  date="lun, 10 Jun 2013 06:00:02 +0200" timestamp="1370836802"/>
+        </unreads>
+    </comic>
+    <comic id="554" name="The Oatmeal" website="http://theoatmeal.com/comics">
+        <unreads>
+            <strip id="214585" imageurl="http://s3.amazonaws.com/theoatmeal-img/comics/womancat/womancat.png" imagetext=""  date="mar, 4 Jun 2013 02:00:05 +0200" timestamp="1370304005"/>
+            <strip id="214836" imageurl="http://s3.amazonaws.com/theoatmeal-img/comics/bacon_flavor/bacon_flavor.png" imagetext=""  date="jue, 6 Jun 2013 22:00:02 +0200" timestamp="1370548802"/>
+        </unreads>
+    </comic>
+    <comic id="125" name="Piled Higher &amp; Deeper (PhD)" website="http://www.phdcomics.com/">
+        <unreads>
+            <strip id="214452" imageurl="http://www.phdcomics.com/comics/archive/phd053113s.gif" imagetext=""  date="dom, 2 Jun 2013 14:00:07 +0200" timestamp="1370174407"/>
+            <strip id="214669" imageurl="http://www.phdcomics.com/comics/archive/phd060313s.gif" imagetext=""  date="mié, 5 Jun 2013 02:00:05 +0200" timestamp="1370390405"/>
+            <strip id="214833" imageurl="http://www.phdcomics.com/comics/archive/phd060513s.gif" imagetext=""  date="jue, 6 Jun 2013 22:00:02 +0200" timestamp="1370548802"/>
+            <strip id="215053" imageurl="http://www.phdcomics.com/comics/archive/phd060713s.gif" imagetext=""  date="lun, 10 Jun 2013 06:00:02 +0200" timestamp="1370836802"/>
+        </unreads>
+    </comic>
+    <comic id="227" name="A Softer World" website="http://www.asofterworld.com/">
+        <unreads>
+            <strip id="214566" imageurl="http://www.asofterworld.com/clean/bills.jpg" imagetext="Even a sick day would be nice."  date="lun, 3 Jun 2013 22:00:03 +0200" timestamp="1370289603"/>
+            <strip id="214663" imageurl="http://www.asofterworld.com/clean/fog.jpg" imagetext="sleep your cares away"  date="mié, 5 Jun 2013 02:00:05 +0200" timestamp="1370390405"/>
+            <strip id="214735" imageurl="http://www.asofterworld.com/clean/eatshit.jpg" imagetext="what you get for choosing poor parents"  date="mié, 5 Jun 2013 18:00:02 +0200" timestamp="1370448002"/>
+            <strip id="214922" imageurl="http://www.asofterworld.com/clean/bedside.jpg" imagetext="All the awesome, none of the hassle."  date="vie, 7 Jun 2013 18:00:03 +0200" timestamp="1370620803"/>
+        </unreads>
+    </comic>
+    <comic id="352" name="channelATE" website="http://www.channelate.com/">
+        <unreads>
+            <strip id="214247" imageurl="http://www.channelate.com/comics/2013-05-30-gravely-timed.png" imagetext="Gravely Timed."  date="jue, 30 May 2013 22:00:03 +0200" timestamp="1369944003"/>
+            <strip id="214432" imageurl="http://www.channelate.com/comics/2013-06-01-reps.png" imagetext="Reps."  date="dom, 2 Jun 2013 10:00:02 +0200" timestamp="1370160002"/>
+            <strip id="214985" imageurl="http://www.channelate.com/comics/2013-06-08-death.png" imagetext="Life and Death."  date="sáb, 8 Jun 2013 22:00:02 +0200" timestamp="1370721602"/>
+        </unreads>
+    </comic>
+    <comic id="168" name="Conejo Frustrado" website="http://www.conejofrustrado.com/">
+        <unreads>
+            <strip id="214610" imageurl="http://www.conejofrustrado.com/comics/2013-06-04-Conejo-Frustrado-219-Celos.jpg" imagetext=""  date="mar, 4 Jun 2013 10:00:02 +0200" timestamp="1370332802"/>
+        </unreads>
+    </comic>
+    <comic id="19" name="Unspeakable Vault (of Doom)" website="http://www.goominet.com/unspeakable-vault/">
+        <unreads>
+            <strip id="214426" imageurl="http://www.goominet.com/uploads/tx_cenostripviewer/w206_vance.jpg" imagetext=""  date="dom, 2 Jun 2013 06:00:02 +0200" timestamp="1370145602"/>
+            <strip id="214755" imageurl="http://www.goominet.com/uploads/tx_cenostripviewer/w207_freddy.jpg" imagetext=""  date="jue, 6 Jun 2013 02:00:03 +0200" timestamp="1370476803"/>
+        </unreads>
+    </comic>
+    <comic id="376" name="DogHouse" website="http://www.thedoghousediaries.com/">
+        <unreads>
+            <strip id="214346" imageurl="http://thedoghousediaries.com/comics/uncategorized/2013-05-31-4325ef0.png" imagetext="These are absolutely the only pros and cons of being tall."  date="vie, 31 May 2013 18:00:02 +0200" timestamp="1370016002"/>
+            <strip id="214540" imageurl="http://thedoghousediaries.com/comics/uncategorized/2013-06-03-2c43bdb.png" imagetext="So much leg room! What will I do with all of it?!"  date="lun, 3 Jun 2013 14:00:03 +0200" timestamp="1370260803"/>
+            <strip id="214569" imageurl="http://thedoghousediaries.com/comics/uncategorized/2013-06-03-188b72f.png" imagetext="So much leg room! What will I do with all of it?!"  date="lun, 3 Jun 2013 22:00:03 +0200" timestamp="1370289603"/>
+            <strip id="214738" imageurl="http://thedoghousediaries.com/comics/uncategorized/2013-06-05-d34d5bb.png" imagetext="I am, however, exploring uncharted territories on our bed."  date="mié, 5 Jun 2013 18:00:02 +0200" timestamp="1370448002"/>
+            <strip id="214932" imageurl="http://thedoghousediaries.com/comics/uncategorized/2013-06-07-12a8744.png" imagetext="Sleep is for the tired."  date="vie, 7 Jun 2013 22:00:02 +0200" timestamp="1370635202"/>
+        </unreads>
+    </comic>
+    <comic id="359" name="Amazing SuperPowers" website="http://www.amazingsuperpowers.com/">
+        <unreads>
+            <strip id="214327" imageurl="http://www.amazingsuperpowers.com/comics/2013-05-31-29th-Birthday.png" imagetext="It&#39;s important to be ageless gracefully."  date="vie, 31 May 2013 14:00:08 +0200" timestamp="1370001608"/>
+            <strip id="214473" imageurl="http://www.amazingsuperpowers.com/comics/2013-06-03-Smell-My-Finger.png" imagetext="Now everyone at school is going to know how diverse his portfolio is."  date="lun, 3 Jun 2013 06:00:02 +0200" timestamp="1370232002"/>
+            <strip id="214727" imageurl="http://www.amazingsuperpowers.com/comics/2013-06-05-Boring-Jason.png" imagetext="&#39;&#39;get a HOBBY, jason."  date="mié, 5 Jun 2013 14:00:03 +0200" timestamp="1370433603"/>
+            <strip id="214905" imageurl="http://www.amazingsuperpowers.com/comics/2013-06-07-Naked-Women.png" imagetext="&#39;&#39;She&#39;s changing! Ooh yeah! She&#39;s changed forever!!&#39;&#39;"  date="vie, 7 Jun 2013 14:00:06 +0200" timestamp="1370606406"/>
+            <strip id="215102" imageurl="http://www.amazingsuperpowers.com/comics/2013-06-10-Bomb-Squad.png" imagetext="&#39;&#39;You&#39;re right, let&#39;s SHOOT the green wire.&#39;&#39;"  date="lun, 10 Jun 2013 14:00:04 +0200" timestamp="1370865604"/>
+        </unreads>
+    </comic>
+    <comic id="45" name="Saturday Morning Breakfast Cereal" website="http://www.smbc-comics.com/">
+        <unreads>
+            <strip id="214242" imageurl="http://www.smbc-comics.com/comics/20130530.gif" imagetext=""  date="jue, 30 May 2013 18:00:03 +0200" timestamp="1369929603"/>
+            <strip id="214350" imageurl="http://www.smbc-comics.com/comics/20130531.gif" imagetext=""  date="vie, 31 May 2013 18:00:02 +0200" timestamp="1370016002"/>
+            <strip id="214402" imageurl="http://www.smbc-comics.com/comics/20130601.gif" imagetext=""  date="sáb, 1 Jun 2013 14:00:04 +0200" timestamp="1370088004"/>
+            <strip id="214457" imageurl="http://www.smbc-comics.com/comics/20130602.gif" imagetext=""  date="dom, 2 Jun 2013 18:00:03 +0200" timestamp="1370188803"/>
+            <strip id="214562" imageurl="http://www.smbc-comics.com/comics/20130603.gif" imagetext=""  date="lun, 3 Jun 2013 18:00:02 +0200" timestamp="1370275202"/>
+            <strip id="214653" imageurl="http://www.smbc-comics.com/comics/20130604.gif" imagetext=""  date="mar, 4 Jun 2013 18:00:03 +0200" timestamp="1370361603"/>
+            <strip id="214827" imageurl="http://www.smbc-comics.com/comics/20130606after.gif" imagetext=""  date="jue, 23 May 2013 22:21:33 +0200" timestamp="1369340493"/>
+            <strip id="214828" imageurl="http://www.smbc-comics.com/comics/20130606.png" imagetext=""  date="jue, 23 May 2013 22:21:36 +0200" timestamp="1369340496"/>
+            <strip id="214982" imageurl="http://www.smbc-comics.com/comics/20130608.png" imagetext=""  date="sáb, 8 Jun 2013 18:00:03 +0200" timestamp="1370707203"/>
+            <strip id="215023" imageurl="http://www.smbc-comics.com/comics/20130609.png" imagetext=""  date="dom, 9 Jun 2013 18:00:03 +0200" timestamp="1370793603"/>
+            <strip id="215112" imageurl="http://www.smbc-comics.com/comics/20130610.png" imagetext=""  date="lun, 10 Jun 2013 14:00:04 +0200" timestamp="1370865604"/>
+        </unreads>
+    </comic>
+    <comic id="284" name="Saturday Morning Breakfast Cereal After" website="http://www.smbc-comics.com/">
+        <unreads>
+            <strip id="214243" imageurl="http://www.smbc-comics.com/comics/20130530after.gif" imagetext=""  date="jue, 30 May 2013 18:00:03 +0200" timestamp="1369929603"/>
+            <strip id="214351" imageurl="http://www.smbc-comics.com/comics/20130531after.gif" imagetext=""  date="vie, 31 May 2013 18:00:02 +0200" timestamp="1370016002"/>
+            <strip id="214403" imageurl="http://www.smbc-comics.com/comics/20130601after.gif" imagetext=""  date="sáb, 1 Jun 2013 14:00:04 +0200" timestamp="1370088004"/>
+            <strip id="214458" imageurl="http://www.smbc-comics.com/comics/20130602after.gif" imagetext=""  date="dom, 2 Jun 2013 18:00:03 +0200" timestamp="1370188803"/>
+            <strip id="214563" imageurl="http://www.smbc-comics.com/comics/20130603after.gif" imagetext=""  date="lun, 3 Jun 2013 18:00:02 +0200" timestamp="1370275202"/>
+            <strip id="214654" imageurl="http://www.smbc-comics.com/comics/20130604after.gif" imagetext=""  date="mar, 4 Jun 2013 18:00:03 +0200" timestamp="1370361603"/>
+            <strip id="214745" imageurl="http://www.smbc-comics.com/comics/20130605after.gif" imagetext=""  date="mié, 5 Jun 2013 18:00:02 +0200" timestamp="1370448002"/>
+            <strip id="214826" imageurl="http://www.smbc-comics.com/comics/20130606after.gif" imagetext=""  date="jue, 6 Jun 2013 18:00:03 +0200" timestamp="1370534403"/>
+            <strip id="214983" imageurl="http://www.smbc-comics.com/comics/20130608after.gif" imagetext=""  date="sáb, 8 Jun 2013 18:00:03 +0200" timestamp="1370707203"/>
+            <strip id="215024" imageurl="http://www.smbc-comics.com/comics/20130609after.gif" imagetext=""  date="dom, 9 Jun 2013 18:00:03 +0200" timestamp="1370793603"/>
+            <strip id="215113" imageurl="http://www.smbc-comics.com/comics/20130610after.gif" imagetext=""  date="lun, 10 Jun 2013 14:00:04 +0200" timestamp="1370865604"/>
+        </unreads>
+    </comic>
+</unreadcomics>
