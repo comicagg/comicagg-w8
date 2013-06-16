@@ -42,7 +42,15 @@ namespace ComicaggApp.Pages
             OverlayText.Text = Application.Current.Resources["LoadingText"] as string;
 
             //Load the unread comics from the server
-            String ret = await WebHelper.DoRequest("/unread/withstrips/", WebHelper.Methods.GET, null, true);
+            String ret = await WebHelper.DoRequest("/api/unread/withstrips/", WebHelper.Methods.GET, null, true);
+
+            if (ret == null)
+            {
+                //We didnt get a proper response
+                OverlayText.Text = Application.Current.Resources["ErrorFetchingText"] as string;
+                return;
+            }
+
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(ret);

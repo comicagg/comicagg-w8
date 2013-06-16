@@ -11,6 +11,7 @@
     <x:String x:Key="ButtonMarkAsRead">Mark as read and go to next comic</x:String>
     <x:String x:Key="LoadingText">Please, wait while the content loads...</x:String>
     <x:String x:Key="NoUnreadComicsText">There are no new comics</x:String>
+    <x:String x:Key="ErrorFetchingText">An error fetching the comics occurred. Are you offline?</x:String>
     <x:String x:Key="TotalUnreadsText">You have {0} unread comics</x:String>
     <x:String x:Key="ComicsHowToText">Click on a name on the left to show the strips</x:String>
 </ResourceDictionary>
