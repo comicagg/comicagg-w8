@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -31,11 +32,51 @@ namespace ComicaggApp.Pages
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            bool b = WebHelper.HaveAccessToken();
+            ShowOverlay();
+            //Do the initial request to get the username and the number of unread comics.
+            String ret = await WebHelper.DoRequest("/api/user/", WebHelper.Methods.GET, null, true);
+            if (ret == null)
+            {
+                //We didnt get a proper response
+                //OverlayText.Text = Application.Current.Resources["ErrorFetchingText"] as string;
+                HideOverlay();
+                return;
+            }
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(ret);
+            string username = (string)doc.FirstChild.NextSibling.Attributes.GetNamedItem("username").NodeValue;
+            int unreadCount = int.Parse((string)doc.FirstChild.NextSibling.Attributes.GetNamedItem("totalunreads").NodeValue);
+
+            WelcomeTitle.Text = String.Format(WelcomeTitle.Text, username);
+
+            if (unreadCount == 0)
+            {
+                ReadComicsButton.Content = Application.Current.Resources["NoNewComicsButtonText"] as string;
+            }
+            else
+            {
+                string s = Application.Current.Resources["NewComicsButtonText"] as string;
+                ReadComicsButton.Content = String.Format(s, unreadCount);
+            }
+            //Show the welcome panel, hide the overlay
+            HideOverlay();
         }
 
+        private void HideOverlay()
+        {
+            WelcomePanel.Opacity = 1;
+            Overlay.SetValue(Canvas.ZIndexProperty, -1);
+            Overlay.Opacity = 0;
+        }
+
+        private void ShowOverlay()
+        {
+            WelcomePanel.Opacity = 0;
+            Overlay.SetValue(Canvas.ZIndexProperty, 1);
+            Overlay.Opacity = 0.3;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ReadComics));

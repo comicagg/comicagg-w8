@@ -15,11 +15,14 @@
     </Page.TopAppBar>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" Height="160" Margin="0" VerticalAlignment="Center" Width="568">
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{StaticResource TextWelcomeUserTitle}" VerticalAlignment="Center" Style="{StaticResource StyleWelcomeTitle}" Height="78" Margin="0"/>
+        <Grid x:Name="Overlay" Grid.ColumnSpan="2" Opacity="0.3" Background="#FFB4D6FF" Canvas.ZIndex="1" d:IsHidden="True">
+            <TextBlock x:Name="OverlayText" Text="{StaticResource LoadingText}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" TextAlignment="Center"/>
+        </Grid>
+        <StackPanel x:Name="WelcomePanel" HorizontalAlignment="Center" Height="160" Margin="0" VerticalAlignment="Center" Width="568">
+            <TextBlock x:Name="WelcomeTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{StaticResource TextWelcomeUserTitle}" VerticalAlignment="Center" Style="{StaticResource StyleWelcomeTitle}" Height="78" Margin="0"/>
             <StackPanel Height="45" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,30,0,0">
-                <Button Content="{StaticResource TextReadComics}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="45" Click="Button_Click" Style="{StaticResource ButtonCentered}" Margin="0"/>
-                <Button Content="{StaticResource TextChoosecomics}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="20,0,0,0" Style="{StaticResource ButtonCentered}"/>
+                <Button x:Name="ReadComicsButton" Content="{StaticResource NoNewComicsButtonText}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="45" Click="Button_Click" Style="{StaticResource ButtonCentered}" Margin="0" MinWidth="200"/>
+                <Button Content="{StaticResource TextChoosecomics}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="20,0,0,0" Style="{StaticResource ButtonCentered}" MinWidth="200"/>
             </StackPanel>
         </StackPanel>
 
