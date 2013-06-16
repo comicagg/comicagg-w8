@@ -15,8 +15,11 @@
     </Page.TopAppBar>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid x:Name="Overlay" Grid.ColumnSpan="2" Opacity="0.3" Background="#FFB4D6FF" Canvas.ZIndex="1" d:IsHidden="True">
-            <TextBlock x:Name="OverlayText" Text="{StaticResource LoadingText}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" TextAlignment="Center"/>
+        <Grid x:Name="Overlay" Grid.ColumnSpan="2" Opacity="1" Background="#FFB4D6FF" Canvas.ZIndex="1">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="OverlayText" Text="{StaticResource LoadingText}" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" TextAlignment="Center"/>
+                <Button x:Name="OverlayButton" Grid.Column="1" MinWidth="50" Style="{StaticResource ButtonCentered}" HorizontalAlignment="Center" Margin="2,15,2,2" Visibility="Collapsed"/>
+            </StackPanel>
         </Grid>
         <StackPanel x:Name="WelcomePanel" HorizontalAlignment="Center" Height="160" Margin="0" VerticalAlignment="Center" Width="568">
             <TextBlock x:Name="WelcomeTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{StaticResource TextWelcomeUserTitle}" VerticalAlignment="Center" Style="{StaticResource StyleWelcomeTitle}" Height="78" Margin="0"/>

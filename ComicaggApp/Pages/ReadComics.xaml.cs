@@ -40,7 +40,7 @@ namespace ComicaggApp.Pages
             OverlayText.Text = Application.Current.Resources["LoadingText"] as string;
 
             //Load the unread comics from the server
-            String ret = await WebHelper.DoRequest("/api/unread/withstrips/", WebHelper.Methods.GET, null, true);
+            String ret = await WebHelper.Request("/api/unread/withstrips/", WebHelper.Methods.GET, null, true);
 
             if (ret == null)
             {
@@ -100,7 +100,7 @@ namespace ComicaggApp.Pages
         private void ShowOverlay()
         {
             Overlay.SetValue(Canvas.ZIndexProperty, 1);
-            Overlay.Opacity = 0.3;
+            Overlay.Opacity = 1;
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace ComicaggApp.Pages
             //Mark as read in the server
             Dictionary<string, string> kv = new Dictionary<string, string>();
             kv["vote"] = "0";
-            String ret = await WebHelper.DoRequest(String.Format("/comic/{0}/", CurrentComicId), WebHelper.Methods.POST, kv, true);
+            String ret = await WebHelper.Request(String.Format("/api/comic/{0}/", CurrentComicId), WebHelper.Methods.POST, kv, true);
 
             if (ret == null)
             {

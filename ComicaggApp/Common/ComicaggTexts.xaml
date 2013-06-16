@@ -11,6 +11,11 @@
     <x:String x:Key="NewComicsButtonText">{0} new comics to read</x:String>
     <x:String x:Key="TextChoosecomics">Choose comics</x:String>
 
+    <x:String x:Key="NeedToLoginAgainText">There is something wrong with your session. You may need to log in again.</x:String>
+    <x:String x:Key="UnexpectedErrorText">I got a weird response from the server. You may need to log in again.</x:String>
+    <x:String x:Key="GeneralErrorText">Something has gone wrong. Might be a connection or server problem. Try later, please.</x:String>
+    <x:String x:Key="LogInAgainButtonText">Log in</x:String>
+
     <x:String x:Key="ButtonMarkAsRead">Mark as read and go to next comic</x:String>
     <x:String x:Key="LoadingText">Please, wait while the content loads...</x:String>
     <x:String x:Key="NoUnreadComicsText">There are no new comics</x:String>

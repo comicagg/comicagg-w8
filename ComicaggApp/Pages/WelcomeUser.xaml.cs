@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Windows.Data.Json;
 using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -34,14 +35,36 @@ namespace ComicaggApp.Pages
         {
             ShowOverlay();
             //Do the initial request to get the username and the number of unread comics.
-            String ret = await WebHelper.DoRequest("/api/user/", WebHelper.Methods.GET, null, true);
-            if (ret == null)
+            String ret = null;
+            try
             {
-                //We didnt get a proper response
-                //OverlayText.Text = Application.Current.Resources["ErrorFetchingText"] as string;
-                HideOverlay();
+                ret = await WebHelper.Request("/api/user/", WebHelper.Methods.GET, null, true);
+            }
+            catch (NeedToLoginAgainException ex)
+            {
+                ex.ToString();
+                OverlayText.Text = Application.Current.Resources["NeedToLoginAgainText"] as string;
+                OverlayButton.Content = Application.Current.Resources["LogInAgainButtonText"] as string;
+                OverlayButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                OverlayButton.Click += ButtonLogout_Click;
                 return;
             }
+            catch (UnexpectedErrorException ex)
+            {
+                ex.ToString();
+                OverlayText.Text = Application.Current.Resources["UnexpectedErrorText"] as string;
+                OverlayButton.Content = Application.Current.Resources["LogInAgainButtonText"] as string;
+                OverlayButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                OverlayButton.Click += ButtonLogout_Click;
+                return;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                OverlayText.Text = Application.Current.Resources["GeneralErrorText"] as string;
+                return;
+            }
+
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(ret);
             string username = (string)doc.FirstChild.NextSibling.Attributes.GetNamedItem("username").NodeValue;
@@ -73,7 +96,8 @@ namespace ComicaggApp.Pages
         {
             WelcomePanel.Opacity = 0;
             Overlay.SetValue(Canvas.ZIndexProperty, 1);
-            Overlay.Opacity = 0.3;
+            Overlay.Opacity = 1;
+            OverlayButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
