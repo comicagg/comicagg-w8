@@ -15,16 +15,16 @@ namespace ComicaggApp
 {
     class WebHelper
     {
-        static Uri BaseApiUri = new Uri("https://www.comicagg.com/api/");
-        static Uri callbackUri = new Uri("http://oauth2/redirect");
-        static string client_id = "28e6f56805988feb5547";
-        static string client_secret = "1e3bf1c96ae2163a04b474ac1efa7cadb555ee32";
+        static string BaseUri = "https://dev.comicagg.com";
+        static string OauthCallbackUri = "";
+        static string OauthClientId = "";
+        static string OauthClientSecret = "";
 
         public async static Task Login()
         {
-            Uri requestUri = new Uri("https://www.comicagg.com/oauth2/authorize/?client_id=" + client_id + "&response_type=token&state=test_state&scope=write");
+            Uri requestUri = new Uri(BaseUri + "/oauth2/authorize/?client_id=" + OauthClientId + "&response_type=token&state=test_state&scope=write");
 
-            WebAuthenticationResult result = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, callbackUri);
+            WebAuthenticationResult result = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, new Uri(OauthCallbackUri));
             if (result.ResponseStatus == WebAuthenticationStatus.Success)
             {
                 Uri resultUri = new Uri(result.ResponseData);
@@ -48,17 +48,16 @@ namespace ComicaggApp
 
         private async static Task GetAccessToken(string code)
         {
-            Uri requestUri = new Uri("https://www.comicagg.com/oauth2/access_token/");
-
             Dictionary<string, string> kv = new Dictionary<string, string>();
             kv["grant_type"] = "authorization_code";
-            kv["client_id"] = client_id;
-            kv["client_secret"] = client_secret;
+            kv["client_id"] = OauthClientId;
+            kv["client_secret"] = OauthClientSecret;
             kv["code"] = code;
-            kv["redirect_url"] = callbackUri.ToString();
-            string ret = await DoRequest(requestUri, Methods.POST, kv, false);
+            kv["redirect_url"] = OauthCallbackUri;
+            string ret = await DoRequest("/oauth2/access_token/", Methods.POST, kv, false);
             JsonObject token;
             JsonObject.TryParse(ret, out token);
+            //Instead of checking how many items were returned, better check if an error was sent or not
             if (token.Count == 4)
             {
                 Windows.Storage.ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
@@ -67,6 +66,7 @@ namespace ComicaggApp
             }
             else
             {
+                //TODO
                 //return false;
             }
         }
@@ -74,7 +74,7 @@ namespace ComicaggApp
         public static bool HaveAccessToken()
         {
             Windows.Storage.ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
-            return roamingSettings.Values.Keys.Contains("access_token");
+            return roamingSettings.Values.Keys.Contains("access_token") && ((string) roamingSettings.Values["access_token"]).Length > 0;
         }
 
         public static string GetAccessToken()
@@ -96,17 +96,22 @@ namespace ComicaggApp
             POST
         }
 
+        /// <summary>
+        ///  Does an HTTP request
+        ///  <param name="uriPath">Absolute HTTP path. Must start with a slash (/).</param>
+        ///  <param name="authenticated">Bool to indicate wether the request will be OAuth authenticated</param>
+        /// </summary>
         public async static Task<string> DoRequest(string uriPath, Methods method, Dictionary<string,string> content, bool authenticated)
         {
-            UriBuilder ub = new UriBuilder(BaseApiUri);
-            ub.Path += uriPath.StartsWith("/") ? uriPath.Substring(1) : uriPath;
-            Uri url = ub.Uri;
+            Uri url = new Uri(BaseUri + uriPath);
             return await DoRequest(url, method, content, authenticated);
         }
 
-        public async static Task<string> DoRequest(Uri url, Methods method, Dictionary<string,string> content, bool authenticated)
+        private async static Task<string> DoRequest(Uri url, Methods method, Dictionary<string,string> content, bool authenticated)
         {
+            //Asked for an authenticated request but we don't have an Access Token. Do nothing.
             if (authenticated && !HaveAccessToken()) return null;
+
             HttpClient hc = new HttpClient();
             HttpContent httpContent = null;
             if (content != null)
@@ -117,18 +122,24 @@ namespace ComicaggApp
                 hc.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(GetAccessToken());
             }
             string ret = null;
-            switch (method)
+            try
             {
-                case Methods.GET:
-                    ret = await hc.GetStringAsync(url);
-                    break;
-                case Methods.POST:
-                    HttpResponseMessage response = await hc.PostAsync(url, httpContent);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        ret = await response.Content.ReadAsStringAsync();
-                    }
-                    break;
+                switch (method)
+                {
+                    case Methods.GET:
+                        ret = await hc.GetStringAsync(url);
+                        break;
+                    case Methods.POST:
+                        HttpResponseMessage response = await hc.PostAsync(url, httpContent);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            ret = await response.Content.ReadAsStringAsync();
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
             }
             return ret;
         }
