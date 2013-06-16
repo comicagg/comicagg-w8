@@ -16,6 +16,9 @@ namespace ComicaggApp
     class WebHelper
     {
         static string BaseUri = "https://dev.comicagg.com";
+
+        #region OAuth2 stuff
+
         static string OauthCallbackUri = "";
         static string OauthClientId = "";
         static string OauthClientSecret = "";
@@ -89,6 +92,8 @@ namespace ComicaggApp
             roamingSettings.Values["access_token"] = "";
             roamingSettings.Values["refresh_token"] = "";
         }
+
+        #endregion
 
         public enum Methods
         {
